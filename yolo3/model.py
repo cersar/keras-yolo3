@@ -88,6 +88,7 @@ def yolo_body(inputs, num_anchors, num_classes):
 
 def tiny_yolo_body(inputs, num_anchors, num_classes):
     '''Create Tiny YOLO_v3 model CNN body in keras.'''
+    print("Create Tiny YOLO_v3 model ...")
     x1 = compose(
             DarknetConv2D_BN_Leaky(16, (3,3)),
             MaxPooling2D(pool_size=(2,2), strides=(2,2), padding='same'),
